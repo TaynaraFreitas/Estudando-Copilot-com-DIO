@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Emissão CO2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 0.75rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #results {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Emissão CO2</h1>
+        <p>Calcule a emissão de CO2 da sua viagem com base na distância e no meio de transporte utilizado.</p>
+    </header>
+    <main>
+        <section id="calculator">
+            <h2>Calcule Suas Emissões de CO2</h2>
+            <form id="emission-form">
+                <label for="distance">Distância Percorrida (km):</label>
+                <input type="number" id="distance" min="0" step="0.1" required>
+                
+                <label for="transport">Meio de Transporte:</label>
+                <select id="transport" required>
+                    <option value="">Selecione o Transporte</option>
+                    <option value="car">Carro</option>
+                    <option value="bus">Ônibus</option>
+                    <option value="train">Trem</option>
+                    <option value="plane">Avião</option>
+                    <option value="bike">Bicicleta</option>
+                    <option value="walk">A Pé</option>
+                </select>
+                
+                <button type="submit">Calcular Emissão de CO2</button>
+            </form>
+        </section>
+        <section id="results" hidden>
+            <h2>Resultados</h2>
+            <p>Sua emissão estimada de CO2 para esta viagem é: <strong id="emission-value"></strong> kg CO2</p>
+            <p id="tip"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Calculadora de Emissão CO2. Dados aproximados e para fins educacionais.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

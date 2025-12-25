@@ -22,5 +22,6 @@ Este projeto foi desenvolvido com base nas orientações do curso da DIO e com o
 ## 🔧 Tecnologias Utilizadas  
 - HTML  
 - CSS  
+- JavaScript  
 - GitHub Copilot  
 - Visual Studio Code  
